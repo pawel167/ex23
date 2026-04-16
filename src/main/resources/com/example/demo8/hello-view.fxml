@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="10.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/25"
+      fx:controller="com.example.demo8.HelloController"
+      prefWidth="620.0">
+    <padding>
+        <Insets top="10.0" right="10.0" bottom="10.0" left="10.0"/>
+    </padding>
+
+    <HBox spacing="10.0" alignment="CENTER_LEFT">
+        <Label text="Поиск по ФИО:"/>
+        <TextField fx:id="searchField" promptText="Введите ФИО..." prefWidth="200.0"/>
+        <Label text="Разряд:"/>
+        <ComboBox fx:id="razrCB" prefWidth="130.0" promptText="Показать всё"/>
+        <Label text="Сортировка:"/>
+        <ComboBox fx:id="sortCB" prefWidth="150.0" promptText="По возрастанию"/>
+    </HBox>
+
+    <TableView fx:id="tablet" prefHeight="400.0" prefWidth="600.0">
+        <columns>
+            <TableColumn fx:id="codet"   prefWidth="80.0"  text="Код"/>
+            <TableColumn fx:id="fiot"    prefWidth="220.0" text="ФИО"/>
+            <TableColumn fx:id="razrt"   prefWidth="140.0" text="Разряд"/>
+            <TableColumn fx:id="salaryt" prefWidth="150.0" text="Оклад"/>
+        </columns>
+    </TableView>
+</VBox>
